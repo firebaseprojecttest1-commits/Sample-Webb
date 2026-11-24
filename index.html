@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A personal profile website.">
+  <title>About Me | My Personal Space</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home"><span class="brand-mark">A</span> MySpace<span class="brand-dot">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+          <li class="nav-item"><a class="nav-link" href="#goals">Goals</a></li>
+          <li class="nav-item ms-lg-2"><button class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-square me-2"></i>Edit profile</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 order-2 order-lg-1">
+            <p class="eyebrow"><span></span> WELCOME TO MY PERSONAL SPACE</p>
+            <h1>Hi, I'm <span id="heroName">Allen Gabriel</span><span class="accent">.</span></h1>
+            <h2 id="heroRole">A Computer Science student who loves learning and creating.</h2>
+            <p class="hero-copy" id="heroIntro">I'm someone who enjoys exploring new ideas, solving problems, and improving a little every day. This is a small space where you can get to know me.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-primary-custom" href="#about">Get to know me <i class="bi bi-arrow-down-right ms-2"></i></a>
+              <a class="btn btn-outline-custom" href="#goals">My goals</a>
+            </div>
+            <div class="hero-socials mt-5">
+              <span>FIND ME AROUND</span>
+              <a id="facebookLink" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a id="instagramLink" href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a id="githubLink" href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2">
+            <div class="portrait-wrap">
+              <div class="portrait-orbit orbit-one"></div>
+              <div class="portrait-orbit orbit-two"></div>
+              <div class="portrait-card">
+                <img id="profileImage" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85" alt="Profile portrait">
+              </div>
+              <div class="floating-note"><i class="bi bi-stars"></i><span>Always learning<br><strong>Always growing</strong></span></div>
+              <div class="small-label">A LITTLE ABOUT ME <i class="bi bi-arrow-up-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-space">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">01 / THE PERSON BEHIND THE PAGE</p>
+          <h2>A little <span>about me</span></h2>
+        </div>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <div class="content-card h-100">
+              <div class="card-icon"><i class="bi bi-person-heart"></i></div>
+              <h3>Who I am</h3>
+              <p id="aboutText">I'm a student who is curious about how things work and enjoys turning ideas into something useful. I value learning, patience, and personal growth. I may not know everything yet, but I'm always willing to try, ask questions, and improve.</p>
+              <p id="personalityText" class="muted-copy">Thoughtful, curious, determined, and detail-oriented — still learning, still growing.</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="facts-card h-100">
+              <h3 class="mb-4">Quick facts</h3>
+              <div class="fact-row"><span><i class="bi bi-mortarboard"></i> Education</span><strong id="education">BS Computer Science</strong></div>
+              <div class="fact-row"><span><i class="bi bi-geo-alt"></i> Based in</span><strong id="location">Philippines</strong></div>
+              <div class="fact-row"><span><i class="bi bi-lightbulb"></i> Focus</span><strong id="focus">Technology & learning</strong></div>
+              <div class="fact-row"><span><i class="bi bi-chat-heart"></i> Motto</span><strong id="motto">Progress, not perfection.</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="section-space interests-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">02 / THINGS I ENJOY</p>
+          <h2>My interests <span>& passions</span></h2>
+          <p class="section-subtitle">The things that keep me curious and inspired.</p>
+        </div>
+        <div class="row g-3" id="interestList">
+          <div class="col-sm-6 col-lg-4"><div class="interest-card"><div class="interest-icon"><i class="bi bi-code-slash"></i></div><h3>Programming</h3><p>Building projects and learning how technology works.</p></div></div>
+          <div class="col-sm-6 col-lg-4"><div class="interest-card"><div class="interest-icon"><i class="bi bi-book"></i></div><h3>Learning</h3><p>Exploring new topics and developing useful skills.</p></div></div>
+          <div class="col-sm-6 col-lg-4"><div class="interest-card"><div class="interest-icon"><i class="bi bi-camera"></i></div><h3>Creativity</h3><p>Finding ideas and turning them into something meaningful.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="goals" class="section-space">
+      <div class="container">
+        <div class="goal-panel">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <p class="eyebrow">03 / LOOKING AHEAD</p>
+              <h2>Where I'm <span>headed</span></h2>
+              <p id="goalsText">My goal is to keep improving my skills, create projects that can help people, and become someone who is confident in what I can do. I believe every small step is part of a bigger journey.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <div class="goal-symbol"><i class="bi bi-rocket-takeoff"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© <span id="year"></span> <span id="footerName">Allen Gabriel</span>. Made with purpose.</p>
+      <a href="#home">Back to top <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+  </footer>
+
+  <!-- Edit Profile Modal -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <form id="profileForm">
+          <div class="modal-header">
+            <div><p class="eyebrow mb-1">MAKE THIS SPACE YOURS</p><h2 class="modal-title fs-4" id="editModalLabel">Edit your profile</h2></div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="photo-editor mb-4">
+              <img id="photoPreview" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Profile preview">
+              <div class="flex-grow-1"><label for="photoInput" class="form-label fw-semibold">Profile picture</label><input class="form-control" type="file" id="photoInput" accept="image/*"><small class="text-secondary">Choose an image from your device. It is saved in this browser.</small></div>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label" for="nameInput">Your name</label><input class="form-control" id="nameInput" maxlength="60"></div>
+              <div class="col-md-6"><label class="form-label" for="roleInput">Short introduction / role</label><input class="form-control" id="roleInput" maxlength="120"></div>
+              <div class="col-12"><label class="form-label" for="introInput">Homepage introduction</label><textarea class="form-control" id="introInput" rows="2" maxlength="350"></textarea></div>
+              <div class="col-12"><label class="form-label" for="aboutInput">About me</label><textarea class="form-control" id="aboutInput" rows="3" maxlength="700"></textarea></div>
+              <div class="col-12"><label class="form-label" for="personalityInput">Personality / how you describe yourself</label><input class="form-control" id="personalityInput" maxlength="180"></div>
+              <div class="col-md-6"><label class="form-label" for="educationInput">Education</label><input class="form-control" id="educationInput" maxlength="80"></div>
+              <div class="col-md-6"><label class="form-label" for="locationInput">Location</label><input class="form-control" id="locationInput" maxlength="80"></div>
+              <div class="col-md-6"><label class="form-label" for="focusInput">Main focus</label><input class="form-control" id="focusInput" maxlength="80"></div>
+              <div class="col-md-6"><label class="form-label" for="mottoInput">Personal motto</label><input class="form-control" id="mottoInput" maxlength="100"></div>
+              <div class="col-12"><label class="form-label" for="interestsInput">Interests (separate each with a comma)</label><input class="form-control" id="interestsInput" placeholder="Programming, Music, Reading"></div>
+              <div class="col-12"><label class="form-label" for="goalsInput">My goals</label><textarea class="form-control" id="goalsInput" rows="3" maxlength="500"></textarea></div>
+              <div class="col-md-4"><label class="form-label" for="facebookInput">Facebook URL</label><input class="form-control" id="facebookInput" type="url" placeholder="https://..."></div>
+              <div class="col-md-4"><label class="form-label" for="instagramInput">Instagram URL</label><input class="form-control" id="instagramInput" type="url" placeholder="https://..."></div>
+              <div class="col-md-4"><label class="form-label" for="githubInput">GitHub URL</label><input class="form-control" id="githubInput" type="url" placeholder="https://..."></div>
+            </div>
+            <div class="alert alert-light border mt-4 mb-0 small"><i class="bi bi-info-circle me-2"></i>Your changes are saved in this browser using local storage. They are not published online or synced to other devices.</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary-custom">Save changes <i class="bi bi-check2 ms-1"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
