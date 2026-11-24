@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaStudio — Modern Web Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">Nova<span>Studio</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          🌙 Dark
+        </button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Build clean, fast websites without bloat</h1>
+        <p>
+          A lightweight starter template organized with separate HTML, CSS, and JavaScript files—ready to customize for your project.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="#features" class="btn btn-outline">Explore Features</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>What’s Included</h2>
+          <p>Essential building blocks with zero external dependencies.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Responsive Layout</h3>
+            <p>Adapts smoothly from mobile phones to wide desktop screens using CSS Grid and Flexbox.</p>
+          </article>
+          <article class="card">
+            <h3>Light & Dark Theme</h3>
+            <p>Instant theme switching powered by CSS custom properties and saved in local storage.</p>
+          </article>
+          <article class="card">
+            <h3>Interactive Form</h3>
+            <p>Includes client-side validation and instant feedback ready to wire up to a backend or form API.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About This Starter</h2>
+          <p>Clean separation of concerns makes editing and scaling easier.</p>
+        </div>
+        <p class="about-copy">
+          Keep <code>index.html</code> focused on structure, <code>style.css</code> on presentation, and <code>script.js</code> on behavior as your site grows.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Send a quick message to test the form.</p>
+        </div>
+        <div class="form-box">
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Alex Rivera" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="alex@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> NovaStudio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
